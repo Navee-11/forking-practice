@@ -1,0 +1,228 @@
+
+Nithesh Kumar R@DESKTOP-E81ROEE MINGW64 ~
+$ cd desktop
+
+Nithesh Kumar R@DESKTOP-E81ROEE MINGW64 ~/desktop
+$ cd fork
+
+Nithesh Kumar R@DESKTOP-E81ROEE MINGW64 ~/desktop/fork
+$ git clone https://github.com/Navee11/forking-practice.git
+Cloning into 'forking-practice'...
+remote: Enumerating objects: 3, done.
+remote: Counting objects: 100% (3/3), done.
+remote: Total 3 (delta 0), reused 0 (delta 0), pack-reused 0
+Receiving objects: 100% (3/3), done.
+
+Nithesh Kumar R@DESKTOP-E81ROEE MINGW64 ~/desktop/fork
+$ cd forking-practice
+
+Nithesh Kumar R@DESKTOP-E81ROEE MINGW64 ~/desktop/fork/forking-practice (main)
+$ git remote add upstream https://github.com/Navee-11/forking-practice.git
+
+Nithesh Kumar R@DESKTOP-E81ROEE MINGW64 ~/desktop/fork/forking-practice (main)
+$ git remote -v
+origin  https://github.com/Navee11/forking-practice.git (fetch)
+origin  https://github.com/Navee11/forking-practice.git (push)
+upstream        https://github.com/Navee-11/forking-practice.git (fetch)
+upstream        https://github.com/Navee-11/forking-practice.git (push)
+
+Nithesh Kumar R@DESKTOP-E81ROEE MINGW64 ~/desktop/fork/forking-practice (main)
+$ vi README.md
+
+Nithesh Kumar R@DESKTOP-E81ROEE MINGW64 ~/desktop/fork/forking-practice (main)
+$ git status
+On branch main
+Your branch is up to date with 'origin/main'.
+
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+        modified:   README.md
+
+no changes added to commit (use "git add" and/or "git commit -a")
+
+Nithesh Kumar R@DESKTOP-E81ROEE MINGW64 ~/desktop/fork/forking-practice (main)
+$ git branch naveen
+
+Nithesh Kumar R@DESKTOP-E81ROEE MINGW64 ~/desktop/fork/forking-practice (main)
+$ git checkout naveen
+Switched to branch 'naveen'
+M       README.md
+
+Nithesh Kumar R@DESKTOP-E81ROEE MINGW64 ~/desktop/fork/forking-practice (naveen)
+$ git add .
+
+Nithesh Kumar R@DESKTOP-E81ROEE MINGW64 ~/desktop/fork/forking-practice (naveen)
+$ git commit -m "Naveen added a message"
+[naveen 02356fc] Naveen added a message
+ 1 file changed, 3 insertions(+), 1 deletion(-)
+
+Nithesh Kumar R@DESKTOP-E81ROEE MINGW64 ~/desktop/fork/forking-practice (naveen)
+$ git log
+commit 02356fc237ccb191f54e770134ea707011f24f41 (HEAD -> naveen)
+Author: Navee11 <naveenkumar.r1099@gmail.com>
+Date:   Tue Mar 12 13:14:47 2024 +0530
+
+    Naveen added a message
+
+commit 2c704470323a5815e4265755fd2ecf06814d771d (origin/main, origin/HEAD, main)
+Author: Navee-11 <162909458+Navee-11@users.noreply.github.com>
+Date:   Tue Mar 12 13:02:47 2024 +0530
+
+    Initial commit
+
+Nithesh Kumar R@DESKTOP-E81ROEE MINGW64 ~/desktop/fork/forking-practice (naveen)
+$ git push origin naveen
+Enumerating objects: 5, done.
+Counting objects: 100% (5/5), done.
+Delta compression using up to 4 threads
+Compressing objects: 100% (2/2), done.
+Writing objects: 100% (3/3), 313 bytes | 156.00 KiB/s, done.
+Total 3 (delta 0), reused 0 (delta 0), pack-reused 0
+remote:
+remote: Create a pull request for 'naveen' on GitHub by visiting:
+remote:      https://github.com/Navee11/forking-practice/pull/new/naveen
+remote:
+To https://github.com/Navee11/forking-practice.git
+ * [new branch]      naveen -> naveen
+
+Nithesh Kumar R@DESKTOP-E81ROEE MINGW64 ~/desktop/fork/forking-practice (naveen)
+$ touch names.txt
+
+Nithesh Kumar R@DESKTOP-E81ROEE MINGW64 ~/desktop/fork/forking-practice (naveen)
+$ git add .
+git
+Nithesh Kumar R@DESKTOP-E81ROEE MINGW64 ~/desktop/fork/forking-practice (naveen)
+$ git commit -m "names.txt added"
+[naveen 94f7e89] names.txt added
+ 1 file changed, 0 insertions(+), 0 deletions(-)
+ create mode 100644 names.txt
+
+Nithesh Kumar R@DESKTOP-E81ROEE MINGW64 ~/desktop/fork/forking-practice (naveen)
+$ git push origin naveen
+Enumerating objects: 4, done.
+Counting objects: 100% (4/4), done.
+Delta compression using up to 4 threads
+Compressing objects: 100% (2/2), done.
+Writing objects: 100% (3/3), 282 bytes | 94.00 KiB/s, done.
+Total 3 (delta 0), reused 0 (delta 0), pack-reused 0
+To https://github.com/Navee11/forking-practice.git
+   02356fc..94f7e89  naveen -> naveen
+
+Nithesh Kumar R@DESKTOP-E81ROEE MINGW64 ~/desktop/fork/forking-practice (naveen)
+$ git log
+commit 94f7e8957c638b4d85869846efaeac7830d4c35d (HEAD -> naveen, origin/naveen)
+Author: Navee11 <naveenkumar.r1099@gmail.com>
+Date:   Tue Mar 12 13:24:23 2024 +0530
+
+    names.txt added
+
+commit 02356fc237ccb191f54e770134ea707011f24f41
+Author: Navee11 <naveenkumar.r1099@gmail.com>
+Date:   Tue Mar 12 13:14:47 2024 +0530
+
+    Naveen added a message
+
+commit 2c704470323a5815e4265755fd2ecf06814d771d (origin/main, origin/HEAD, main)
+Author: Navee-11 <162909458+Navee-11@users.noreply.github.com>
+Date:   Tue Mar 12 13:02:47 2024 +0530
+
+    Initial commit
+
+Nithesh Kumar R@DESKTOP-E81ROEE MINGW64 ~/desktop/fork/forking-practice (naveen)
+$ git reset 02356fc237ccb191f54e770134ea707011f24f41
+
+Nithesh Kumar R@DESKTOP-E81ROEE MINGW64 ~/desktop/fork/forking-practice (naveen)
+$ git status
+On branch naveen
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        names.txt
+
+nothing added to commit but untracked files present (use "git add" to track)
+
+Nithesh Kumar R@DESKTOP-E81ROEE MINGW64 ~/desktop/fork/forking-practice (naveen)
+$ git add .
+
+Nithesh Kumar R@DESKTOP-E81ROEE MINGW64 ~/desktop/fork/forking-practice (naveen)
+$ git stash
+Saved working directory and index state WIP on naveen: 02356fc Naveen added a message
+
+Nithesh Kumar R@DESKTOP-E81ROEE MINGW64 ~/desktop/fork/forking-practice (naveen)
+$ git status
+On branch naveen
+nothing to commit, working tree clean
+
+Nithesh Kumar R@DESKTOP-E81ROEE MINGW64 ~/desktop/fork/forking-practice (naveen)
+$ git push origin naveen -f
+Total 0 (delta 0), reused 0 (delta 0), pack-reused 0
+To https://github.com/Navee11/forking-practice.git
+ + 94f7e89...02356fc naveen -> naveen (forced update)
+
+Nithesh Kumar R@DESKTOP-E81ROEE MINGW64 ~/desktop/fork/forking-practice (naveen)
+$ git checkout main
+Switched to branch 'main'
+Your branch is up to date with 'origin/main'.
+
+Nithesh Kumar R@DESKTOP-E81ROEE MINGW64 ~/desktop/fork/forking-practice (main)
+$ git status
+On branch main
+Your branch is up to date with 'origin/main'.
+
+nothing to commit, working tree clean
+
+Nithesh Kumar R@DESKTOP-E81ROEE MINGW64 ~/desktop/fork/forking-practice (main)
+$ git log
+commit 2c704470323a5815e4265755fd2ecf06814d771d (HEAD -> main, origin/main, origin/HEAD)
+Author: Navee-11 <162909458+Navee-11@users.noreply.github.com>
+Date:   Tue Mar 12 13:02:47 2024 +0530
+
+    Initial commit
+
+Nithesh Kumar R@DESKTOP-E81ROEE MINGW64 ~/desktop/fork/forking-practice (main)
+To sync the forked main with the upstream's main 
+The command git fetch --all --prune is a Git command used to update the local repository with changes from a remote repository --all=>means all the branches && --prune=>deleted prune
+$ git fetch --all --prune 
+Fetching origin
+Fetching upstream
+remote: Enumerating objects: 1, done.
+remote: Counting objects: 100% (1/1), done.
+remote: Total 1 (delta 0), reused 0 (delta 0), pack-reused 0
+Unpacking objects: 100% (1/1), 898 bytes | 3.00 KiB/s, done.
+From https://github.com/Navee-11/forking-practice
+ * [new branch]      main       -> upstream/main
+
+Nithesh Kumar R@DESKTOP-E81ROEE MINGW64 ~/desktop/fork/forking-practice (main)
+Once the changes are fetched we are resetting the origin's main to upstream's main branch
+$ git reset --hard upstream/main
+HEAD is now at 031dbe2 Merge pull request #1 from Navee11/naveen
+
+Nithesh Kumar R@DESKTOP-E81ROEE MINGW64 ~/desktop/fork/forking-practice (main)
+$ git log
+commit 031dbe2126250e0dde7dfc1103348ed559069f2a (HEAD -> main, upstream/main)
+Merge: 2c70447 02356fc
+Author: Navee-11 <162909458+Navee-11@users.noreply.github.com>
+Date:   Tue Mar 12 13:33:44 2024 +0530
+
+    Merge pull request #1 from Navee11/naveen
+
+    Naveen added a message
+
+commit 02356fc237ccb191f54e770134ea707011f24f41 (origin/naveen, naveen)
+Author: Navee11 <naveenkumar.r1099@gmail.com>
+Date:   Tue Mar 12 13:14:47 2024 +0530
+
+    Naveen added a message
+
+commit 2c704470323a5815e4265755fd2ecf06814d771d (origin/main, origin/HEAD)
+Author: Navee-11 <162909458+Navee-11@users.noreply.github.com>
+Date:   Tue Mar 12 13:02:47 2024 +0530
+
+    Initial commit
+
+Nithesh Kumar R@DESKTOP-E81ROEE MINGW64 ~/desktop/fork/forking-practice (main)
+$ git push origin main
+Total 0 (delta 0), reused 0 (delta 0), pack-reused 0
+To https://github.com/Navee11/forking-practice.git
+   2c70447..031dbe2  main -> main
+
